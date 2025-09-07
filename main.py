@@ -9,11 +9,21 @@ load_dotenv()
 
 app = FastAPI(title="Caroline Sarkki Portfolio API", version="1.0.0")
 
-# Initialize OpenAI client
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+# Initialize OpenAI client (will be created when needed)
+client = None
 
 class QueryRequest(BaseModel):
     query: str
+
+def get_openai_client():
+    """Get OpenAI client, creating it if needed"""
+    global client
+    if client is None:
+        api_key = os.getenv("OPENAI_API_KEY")
+        if not api_key:
+            raise HTTPException(status_code=500, detail="OpenAI API key not configured")
+        client = OpenAI(api_key=api_key)
+    return client
 
 def load_knowledge():
     """Load the knowledge file content"""
@@ -50,6 +60,9 @@ async def root():
 async def query_caroline_info(request: QueryRequest):
     """Process queries about Caroline Sarkki using OpenAI"""
     try:
+        # Get OpenAI client
+        openai_client = get_openai_client()
+        
         # Load knowledge base
         knowledge_content = load_knowledge()
         
@@ -63,7 +76,7 @@ User Query: {request.query}
 Please provide a helpful and accurate response based on the information provided above. If the query is not related to Caroline's professional background, experience, or projects, please politely redirect the conversation back to her professional information."""
 
         # Call OpenAI API
-        response = client.chat.completions.create(
+        response = openai_client.chat.completions.create(
             model="gpt-4o-mini",
             messages=[
                 {"role": "system", "content": "You are a helpful assistant that provides information about Caroline Sarkki, a full stack software engineer. Always be professional and accurate in your responses."},
@@ -84,4 +97,5 @@ Please provide a helpful and accurate response based on the information provided
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    port = int(os.getenv("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
