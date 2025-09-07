@@ -3,7 +3,7 @@ Caroline Sarkki - Full Stack Software Engineer
 Professional Background:
 - Dedicated Full Stack Software Engineer with over 3 years of experience
 - Currently working at KQED (https://www.kqed.org/)
-- Specializes in frontend development, backend API maintenance, and technical leadership
+- Specializes in frontend development, backend API creation and maintenance, and technical leadership
 - Known for meaningful projects that serve the community
 
 Key Projects and Achievements at KQED:
@@ -17,7 +17,7 @@ Key Projects and Achievements at KQED:
 
 Mentorship and Leadership:
 - Mentored 4 interns, helping them grow their technical skills
-- Trained interns in JavaScript, React, Java, Python, PostgreSQL, and MySQL
+- Trained interns in JavaScript, Typescript, React, Redux, Sass, Java, PostgreSQL, and MySQL
 - Led countless technical discussions for both engineers and non-engineers
 - Known for calm problem-solving and clear communication
 
@@ -30,7 +30,7 @@ Recent AI-Powered Projects:
 
 Technical Skills:
 - Frontend: JavaScript, React, Typescript, Redux, Sass, CSS, A11y
-- Backend: Java, Python
+- Backend: Java, Python, Express, FastAPI, Flask, Springboot
 - Testing: Jest, Mocha, Postman
 - CI/CD: Git, Docker, Agile Methodologies, Version Control
 - Databases: PostgreSQL, MySQL, SQL
