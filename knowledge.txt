@@ -30,7 +30,7 @@ Recent AI-Powered Projects:
 
 Technical Skills:
 - Frontend: JavaScript, React, Typescript, Redux, Sass, CSS, A11y
-- Backend: Java, Python, Express, FastAPI, Flask, Springboot
+- Backend: Java, Python, Express, FastAPI, Flask, Springboot, Sequelize, SQLAlchemy
 - Testing: Jest, Mocha, Postman
 - CI/CD: Git, Docker, Agile Methodologies, Version Control
 - Databases: PostgreSQL, MySQL, SQL
