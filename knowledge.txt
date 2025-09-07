@@ -17,7 +17,7 @@ Key Projects and Achievements at KQED:
 
 Mentorship and Leadership:
 - Mentored 4 interns, helping them grow their technical skills
-- Trained interns in JavaScript, Typescript, React, Redux, Sass, Java, PostgreSQL, and MySQL
+- Trained interns in JavaScript, Typescript, React, Redux, Sass, Java, Postman, and MySQL
 - Led countless technical discussions for both engineers and non-engineers
 - Known for calm problem-solving and clear communication
 
