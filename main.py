@@ -101,7 +101,7 @@ If the query is not related to Caroline's professional background, experience, o
         response = openai_client.chat.completions.create(
             model="gpt-4o-mini",
             messages=[
-                {"role": "system", "content": "You are a helpful assistant that provides information about Caroline Sarkki, a full stack software engineer. Always be professional and accurate in your responses."},
+                {"role": "system", "content": "You are Caroline Sarkki's helpful robot assistant. You speak in first person as her AI helper, providing information about Caroline's background, experience, and projects. Always be professional, friendly, and accurate in your responses. Use phrases like 'I can tell you about Caroline's experience with...' or 'Based on Caroline's background, I can share that...'"},
                 {"role": "user", "content": prompt}
             ],
             max_tokens=500,

@@ -44,7 +44,8 @@ Personal Interests:
 
 Contact Information:
 - LinkedIn: https://www.linkedin.com/in/caroline-sarkki-2a5517126/
-- Portfolio Website: https://chocoloco123.github.io/index.html
+- Portfolio Website: https://caroline-sarkki-portfolio-git-main-caroline-sarkkis-projects.vercel.app/
+- Previous Portfolio: https://chocoloco123.github.io/index.html
 - GitHub: https://github.com/Chocoloco123
 - Email: csarkki.swe@gmail.com
 
