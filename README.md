@@ -95,6 +95,7 @@ Accepts a JSON body with a `query` field and returns an AI-generated response ab
 ├── knowledge.txt          # Knowledge base about Caroline
 ├── Dockerfile             # Docker configuration
 ├── docker-compose.yml     # Docker Compose configuration
+├── test_api.py            # API testing script
 └── README.md              # This file
 ```
 

@@ -82,7 +82,20 @@ async def query_caroline_info(request: QueryRequest):
 
 User Query: {request.query}
 
-Please provide a helpful and accurate response based on the information provided above. If the query is not related to Caroline's professional background, experience, or projects, please politely redirect the conversation back to her professional information."""
+Please provide a helpful and accurate response based on the information provided above. Format your response using HTML tags for better readability:
+
+- Use <p> tags for paragraphs
+- Use <ul> and <li> tags for lists
+- Use <strong> tags for bold/important text
+- Use <code> tags for technical terms, languages, and technologies
+- Use <h3> tags for section headers when appropriate
+
+Example formats:
+- For lists: "<p>Here are Caroline's projects:</p><ul><li><strong>Project Name</strong>: Description</li></ul>"
+- For technologies: "<p>Caroline uses <code>React</code>, <code>Python</code>, and <code>PostgreSQL</code></p>"
+- For structured content: "<p>Caroline's experience includes:</p><ul><li><strong>Frontend</strong>: <code>JavaScript</code>, <code>React</code></li><li><strong>Backend</strong>: <code>Python</code>, <code>Java</code></li></ul>"
+
+If the query is not related to Caroline's professional background, experience, or projects, please politely redirect the conversation back to her professional information."""
 
         # Call OpenAI API
         response = openai_client.chat.completions.create(
