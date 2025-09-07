@@ -1,0 +1,53 @@
+Caroline Sarkki - Full Stack Software Engineer
+
+Professional Background:
+- Dedicated Full Stack Software Engineer with over 3 years of experience
+- Currently working at KQED (https://www.kqed.org/)
+- Specializes in frontend development, backend API maintenance, and technical leadership
+- Known for meaningful projects that serve the community
+
+Key Projects and Achievements at KQED:
+- Voter Guide: Developed and maintained voter guide functionality
+- Navigation System Redesign: Completely reinvented the site's navigation menu
+- Micro Websites: Built and maintained various micro websites
+- User Account Management: Worked on revamping user accounts and login flow
+- Backend APIs: Provided maintenance and upgrades for backend APIs and services
+- SEO Improvements: Helped improve search engine optimization
+- Unit Testing: Written comprehensive unit tests for applications
+
+Mentorship and Leadership:
+- Mentored 4 interns, helping them grow their technical skills
+- Trained interns in JavaScript, React, Java, Python, PostgreSQL, and MySQL
+- Led countless technical discussions for both engineers and non-engineers
+- Known for calm problem-solving and clear communication
+
+Recent AI-Powered Projects:
+- Note-taking app with smart summaries
+- Chrome extension for web content summarization
+- AI job search agent
+- Interactive mini games
+- Modern website development partnerships
+
+Technical Skills:
+- Frontend: JavaScript, React, Typescript, Redux, Sass, CSS, A11y
+- Backend: Java, Python
+- Testing: Jest, Mocha, Postman
+- CI/CD: Git, Docker, Agile Methodologies, Version Control
+- Databases: PostgreSQL, MySQL, SQL
+- AI/ML: Building AI-powered tools and applications
+
+Personal Interests:
+- Weekend hikes exploring the Bay Area
+- Salsa dancing
+- Spending time with pet golden retriever
+- Helping bring product ideas and technical puzzles to life
+
+Contact Information:
+- LinkedIn: https://www.linkedin.com/in/caroline-sarkki-2a5517126/
+- Portfolio Website: https://chocoloco123.github.io/index.html
+- GitHub: https://github.com/Chocoloco123
+- Email: csarkki.swe@gmail.com
+
+Company Information:
+- KQED Website: https://www.kqed.org/
+- KQED is a public media organization serving Northern California
