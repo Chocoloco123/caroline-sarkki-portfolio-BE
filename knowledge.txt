@@ -22,11 +22,11 @@ Mentorship and Leadership:
 - Known for calm problem-solving and clear communication
 
 Recent AI-Powered Projects:
-- Note-taking app with smart summaries
-- Chrome extension for web content summarization
-- AI job search agent
-- Interactive mini games
-- Modern website development partnerships
+- AI Note-Taking App: Built with OpenAI API integration for intelligent summarization
+- Chrome Extension: Web content summarizer using AI APIs for instant summaries
+- AI Job Search Agent: Intelligent agent leveraging OpenAI API to aggregate and analyze job postings
+- Interactive AI Games: Created engaging mini games with AI-powered features
+- Modern AI-Enhanced Websites: Partnered with clients to integrate AI capabilities into their web applications
 
 Technical Skills:
 - Frontend: JavaScript, React, Typescript, Redux, Sass, CSS, A11y
@@ -34,7 +34,15 @@ Technical Skills:
 - Testing: Jest, Mocha, Postman
 - CI/CD: Git, Docker, Agile Methodologies, Version Control
 - Databases: PostgreSQL, MySQL, SQL
-- AI/ML: Building AI-powered tools and applications
+- AI/ML: Building AI-powered tools, prototypes, and applications
+
+AI Maker Expertise:
+- OpenAI API Integration: Expert in leveraging OpenAI's GPT models for practical applications
+- AI Application Development: Building real-world AI-powered tools and solutions
+- AI Prototyping: Rapidly creating AI-enhanced applications and features
+- AI Tool Integration: Seamlessly incorporating AI capabilities into existing web applications
+- AI Product Development: Designing and building AI-powered user experiences
+- AI API Management: Efficiently working with various AI service providers and APIs
 
 Personal Interests:
 - Weekend hikes exploring the Bay Area
