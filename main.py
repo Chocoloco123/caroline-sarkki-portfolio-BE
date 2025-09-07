@@ -33,6 +33,11 @@ def load_knowledge():
     except FileNotFoundError:
         return "Knowledge file not found"
 
+@app.get("/health")
+async def health_check():
+    """Health check endpoint for Railway"""
+    return {"status": "healthy", "message": "API is running"}
+
 @app.get("/")
 async def root():
     """Homepage with API information"""
@@ -46,6 +51,10 @@ async def root():
                 "request_body": {
                     "query": "string - Your question about Caroline's experience, projects, or background"
                 }
+            },
+            "/health": {
+                "method": "GET",
+                "description": "Health check endpoint"
             }
         },
         "contact": {
@@ -98,4 +107,7 @@ Please provide a helpful and accurate response based on the information provided
 if __name__ == "__main__":
     import uvicorn
     port = int(os.getenv("PORT", 8000))
+    print(f"Starting server on port {port}")
+    print(f"Environment: PORT={os.getenv('PORT')}")
+    print(f"OpenAI API Key configured: {bool(os.getenv('OPENAI_API_KEY'))}")
     uvicorn.run(app, host="0.0.0.0", port=port)
