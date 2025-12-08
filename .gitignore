@@ -1,2 +1,3 @@
 .env
 RAILWAY_DEPLOYMENT.md
+__pycache__/
