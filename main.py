@@ -4,7 +4,10 @@ from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 from openai import OpenAI
 import os
+import traceback
+from pathlib import Path
 from dotenv import load_dotenv
+import uvicorn
 
 # Load environment variables
 load_dotenv()
@@ -44,13 +47,12 @@ app.add_middleware(
 # Global exception handler
 @app.exception_handler(Exception)
 async def global_exception_handler(request, exc):
-    import traceback
     error_trace = traceback.format_exc()
     print(f"Unhandled exception: {str(exc)}")
     print(f"Traceback: {error_trace}")
     return JSONResponse(
         status_code=500,
-        content={"detail": f"Internal server error: {str(exc)}"}
+        content={"detail": f"Internal server error"}
     )
 
 # Initialize OpenAI client (will be created when needed)
@@ -73,8 +75,7 @@ def load_knowledge():
     """Load the knowledge file content"""
     try:
         # Get the directory where this script is located
-        import pathlib
-        script_dir = pathlib.Path(__file__).parent
+        script_dir = Path(__file__).parent
         knowledge_path = script_dir / "knowledge.txt"
         
         with open(knowledge_path, "r", encoding="utf-8") as f:
@@ -177,14 +178,12 @@ Only redirect if the query is completely unrelated to Caroline (e.g., asking abo
         raise
     except Exception as e:
         # Log the full error for debugging
-        import traceback
         error_trace = traceback.format_exc()
         print(f"Error processing query: {str(e)}")
         print(f"Traceback: {error_trace}")
         raise HTTPException(status_code=500, detail=f"Error processing query: {str(e)}")
 
 if __name__ == "__main__":
-    import uvicorn
     port = int(os.getenv("PORT", 8000))
     reload = os.getenv("ENVIRONMENT", "development") == "development"
     print(f"Starting server on port {port}")
