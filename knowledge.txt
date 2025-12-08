@@ -1,40 +1,67 @@
 Caroline Sarkki - Full Stack Software Engineer
 
 Professional Background:
-- Dedicated Full Stack Software Engineer with over 3 years of experience
-- Currently working at KQED (https://www.kqed.org/)
-- Specializes in frontend development, backend API creation and maintenance, and technical leadership
-- Known for meaningful projects that serve the community
+- Full-Stack Software Engineer with 3+ years of experience building scalable, accessible, and cloud-ready applications
+- Currently working at KQED (https://www.kqed.org/) as Software Engineer — Full-Stack Focus (June 2025 - Present)
+- Specializes in modern UI architecture, backend API development, authentication workflows, real-time data integrations, and cloud deployments
+- Based in San Francisco Bay Area, Remote-Friendly
+- Known for meaningful projects that serve the community and deliver reliable, user-centered solutions
 
-Key Projects and Achievements at KQED:
-- Voter Guide: Developed and maintained voter guide functionality
-- Navigation System Redesign: Completely reinvented the site's navigation menu
-- Micro Websites: Built and maintained various micro websites
-- User Account Management: Worked on revamping user accounts and login flow
-- Backend APIs: Provided maintenance and upgrades for backend APIs and services
-- SEO Improvements: Helped improve search engine optimization
-- Unit Testing: Written comprehensive unit tests for applications
+Professional Experience at KQED:
+
+Software Engineer — Full-Stack Focus (June 2025 - Present):
+- Delivered end-to-end development for a Membership & Account platform rebuild using React, TypeScript, Node.js, Java, Spring Boot, and MongoDB
+- Improved donor and member experience through clearer account interactions and streamlined authentication workflows
+- Built backend APIs for authentication, profile management, and internal integrations
+- Deployed features through CI/CD pipelines using Docker and GCP
+- Collaborated with product managers and designers to create scalable, user-centered software
+- Mentored junior engineers and participated in architecture discussions and reviews
+- Developed full-stack AI applications including an OpenAI-powered chatbot and recommendation engine
+
+Software Developer — Frontend Focus (June 2023 - June 2025):
+- Engineered major features for Voter Guide & Election Results platforms supporting high-traffic election periods
+  - The 2022 Voter Guide was recognized by the Los Angeles Times (https://www.latimes.com/politics/story/2022-11-04/guide-to-midterm-guides-endorsements-california-election-2022)
+- Rebuilt the global navigation system for improved accessibility, clarity, and performance
+- Redesigned banner ad components and enhanced ad delivery integration
+- Integrated dynamic election APIs using React, Redux Toolkit, TypeScript, Sass, and Jest
+- Played a key role in Youth Media's work that earned the company a WCAG 2.1 AA accessibility rating through accessible component patterns
+- Integrated WordPress as a headless CMS supporting editorial workflows
+
+Junior Software Developer (June 2022 - June 2023):
+- Implemented frontend and backend features using React, JavaScript, Python, and REST APIs
+- Contributed to foundational accessible UI patterns adopted across platforms
+- Translated product and design requirements into engineering tasks
+- Improved documentation and test coverage through QA collaboration and reviews
+
+Key Projects and Achievements:
+- Membership & Account Platform: End-to-end rebuild improving login flow and user experience for donors and members
+- Voter Guide & Election Results: High-traffic election systems serving hundreds of thousands of users during election periods. The 2022 Voter Guide was recognized by the Los Angeles Times (https://www.latimes.com/politics/story/2022-11-04/guide-to-midterm-guides-endorsements-california-election-2022)
+- Navigation System Redesign: Completely reinvented global navigation for improved accessibility and performance
+- Youth Media Platform: Played key role in achieving WCAG 2.1 AA accessibility rating for the company through accessible components and patterns
+- Micro Websites: Built and maintained various micro websites focusing on performance, SEO, and user engagement
 
 Mentorship and Leadership:
-- Mentored 4 interns, helping them grow their technical skills
-- Trained interns in JavaScript, Typescript, React, Redux, Sass, Java, Postman, and MySQL
-- Led countless technical discussions for both engineers and non-engineers
+- Mentored 4 interns, helping them grow their technical skills and think like engineers
+- Trained interns and junior developers in JavaScript, TypeScript, React, Redux, Sass, Java, and various development tools
+- Led technical discussions for both engineers and non-engineers
 - Known for calm problem-solving and clear communication
+- Collaborates closely with product managers, designers, and engineering teams
 
-Recent AI-Powered Projects:
-- AI Note-Taking App: Built with OpenAI API integration for intelligent summarization
-- Chrome Extension: Web content summarizer using AI APIs for instant summaries
-- AI Job Search Agent: Intelligent agent leveraging OpenAI API to aggregate and analyze job postings
-- Interactive AI Games: Created engaging mini games with AI-powered features
-- Modern AI-Enhanced Websites: Partnered with clients to integrate AI capabilities into their web applications
+Personal AI-Powered Projects:
+- Crittr: AI-powered pet care platform built with Next.js & FastAPI. Features intelligent chatbot, health tracking, digital journaling, and Google OAuth. Deployed on Railway + Vercel with PostgreSQL database. GitHub: https://github.com/Chocoloco123/Crittr-App
+- AI Note-Taking App: Built with OpenAI API integration for intelligent summarization, smart categorization, and search functionality
+- Chrome Extension: Web content summarizer using AI APIs for instant summaries of web page content
+- AI Job Search Agent: Intelligent agent leveraging OpenAI API to aggregate and analyze job postings with personalized recommendations
+- Interactive Mini Games: Created engaging mini games with modern web technologies
 
 Technical Skills:
-- Frontend: JavaScript, React, Typescript, Redux, Sass, CSS, A11y
-- Backend: Java, Python, Express, FastAPI, Flask, Springboot, Sequelize, SQLAlchemy
-- Testing: Jest, Mocha, Postman
-- CI/CD: Git, Docker, Agile Methodologies, Version Control
-- Databases: PostgreSQL, MySQL, SQL
-- AI/ML: Building AI-powered tools, prototypes, and applications
+- Frontend: React, Redux Toolkit, TypeScript, JavaScript (ES6+), Sass/SCSS, HTML5, CSS3, Responsive Design, Component Architecture, Accessibility (A11y), WCAG 2.1 AA, ARIA
+- Backend: Node.js, Java, Spring Boot, REST APIs, API Design, Authentication (OAuth/JWT), Express, Python (light), FastAPI
+- Databases: MongoDB, SQL, PostgreSQL
+- Cloud & DevOps: Docker, Google Cloud Platform (GCP), CI/CD, GitHub Actions, Cloud Deployments, Containerization
+- Testing: Jest, React Testing Library, Unit Testing, Integration Testing, TDD
+- AI & Modern Tech: OpenAI API, AI Chatbots, Recommendation Systems, Prompt Engineering
+- Collaboration: Agile/Scrum, Product Partnership, Cross-Functional Communication, Mentoring
 
 AI Maker Expertise:
 - OpenAI API Integration: Expert in leveraging OpenAI's GPT models for practical applications
@@ -44,19 +71,27 @@ AI Maker Expertise:
 - AI Product Development: Designing and building AI-powered user experiences
 - AI API Management: Efficiently working with various AI service providers and APIs
 
+Volunteering:
+- Technical Instructor at Code Tenderloin: Taught introductory JavaScript, HTML, and CSS to new programmers. Led hands-on workshops covering foundational web development. Provided one-on-one support to diverse learners. Helped refine teaching materials and curriculum.
+
+Education:
+- App Academy - Full-Stack Software Development
+- University of California, Davis - B.S., Human Development
+
 Personal Interests:
 - Weekend hikes exploring the Bay Area
 - Salsa dancing
-- Spending time with pet golden retriever
+- Spending time with pet golden retriever (who believes he's her pair programmer)
 - Checking out Golden State Valkyries games during free time
+- Experimenting with new tea latte recipes - current favorite is the Blood Orange Creamsicle Latte (made with blood orange rooibos tea, oat-coconut milk blend, and vanilla/coconut syrup). Also enjoys various herbal coffee latte recipes including Trader Joe's Roasted Herbal Coffee Latte variations
+- Enjoying cozy Nintendo Switch games
 - Helping bring product ideas and technical puzzles to life
 
 Contact Information:
-- LinkedIn: https://www.linkedin.com/in/caroline-sarkki-2a5517126/
-- Portfolio Website: https://caroline-sarkki-portfolio-git-main-caroline-sarkkis-projects.vercel.app/
-- Previous Portfolio: https://chocoloco123.github.io/index.html
-- GitHub: https://github.com/Chocoloco123
 - Email: csarkki.swe@gmail.com
+- LinkedIn: https://www.linkedin.com/in/caroline-sarkki-2a5517126/
+- Portfolio Website: https://caroline-sarkki-portfolio.vercel.app/
+- GitHub: https://github.com/Chocoloco123
 
 Company Information:
 - KQED Website: https://www.kqed.org/

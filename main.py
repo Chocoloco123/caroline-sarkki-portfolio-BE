@@ -1,13 +1,59 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 from openai import OpenAI
 import os
+import traceback
+from pathlib import Path
 from dotenv import load_dotenv
+import uvicorn
 
 # Load environment variables
 load_dotenv()
 
 app = FastAPI(title="Caroline Sarkki Portfolio API", version="1.0.0")
+
+# Configure CORS based on environment
+environment = os.getenv("ENVIRONMENT", "development")
+if environment == "production":
+    # Production: only allow specific origins
+    allowed_origins = [
+        "https://caroline-sarkki-portfolio.vercel.app",
+    ]
+    # Allow additional origins from environment variable (comma-separated)
+    # Useful for Vercel preview URLs which are dynamic
+    additional_origins = os.getenv("ALLOWED_ORIGINS", "")
+    if additional_origins:
+        allowed_origins.extend([origin.strip() for origin in additional_origins.split(",")])
+else:
+    # Development: allow local frontend
+    allowed_origins = [
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+    ]
+
+# Add CORS middleware
+print(f"CORS Configuration - Environment: {environment}")
+print(f"Allowed Origins: {allowed_origins}")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=allowed_origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# Global exception handler
+@app.exception_handler(Exception)
+async def global_exception_handler(request, exc):
+    error_trace = traceback.format_exc()
+    print(f"Unhandled exception: {str(exc)}")
+    print(f"Traceback: {error_trace}")
+    return JSONResponse(
+        status_code=500,
+        content={"detail": f"Internal server error"}
+    )
 
 # Initialize OpenAI client (will be created when needed)
 client = None
@@ -28,10 +74,18 @@ def get_openai_client():
 def load_knowledge():
     """Load the knowledge file content"""
     try:
-        with open("knowledge.txt", "r", encoding="utf-8") as f:
+        # Get the directory where this script is located
+        script_dir = Path(__file__).parent
+        knowledge_path = script_dir / "knowledge.txt"
+        
+        with open(knowledge_path, "r", encoding="utf-8") as f:
             return f.read()
-    except FileNotFoundError:
+    except FileNotFoundError as e:
+        print(f"Error loading knowledge file: {e}")
         return "Knowledge file not found"
+    except Exception as e:
+        print(f"Error reading knowledge file: {e}")
+        return "Error reading knowledge file"
 
 @app.get("/health")
 async def health_check():
@@ -71,56 +125,75 @@ async def query_caroline_info(request: QueryRequest):
     try:
         # Get OpenAI client
         openai_client = get_openai_client()
-        
+
         # Load knowledge base
         knowledge_content = load_knowledge()
-        
+
         # Prepare the prompt for OpenAI
-        prompt = f"""Based on the following information about Caroline Sarkki, please answer the user's query:
+        prompt = f"""Based on the following information about Caroline Sarkki, please answer the user's query naturally and concisely:
 
 {knowledge_content}
 
 User Query: {request.query}
 
-Please provide a helpful and accurate response based on the information provided above. Format your response using HTML tags for better readability:
+**IMPORTANT GUIDELINES:**
+- Keep responses brief and conversational
+- For simple greetings like "hello" or "hi", respond with just: "Hi! I'm Clio, Caroline's AI assistant. How can I help you learn about her work?"
+- For questions about hobbies, interests, personal life, what she does outside of work, what she does for fun, personal activities, professional background, experience, projects, or skills - ANSWER THE QUESTION directly based on the information provided. Do NOT redirect these questions.
+- **IMPORTANT**: "hobbies", "outside of work", "personal interests", "what she does for fun", and "personal activities" all refer to the same thing - check the "Personal Interests" section in the knowledge base.
+- Format your response using HTML tags for better readability:
+  - Use <p> tags for paragraphs
+  - Use <ul> and <li> tags for lists
+  - Use <strong> tags for bold/important text
+  - Use <code> tags for technical terms, languages, and technologies
 
-- Use <p> tags for paragraphs
-- Use <ul> and <li> tags for lists
-- Use <strong> tags for bold/important text
-- Use <code> tags for technical terms, languages, and technologies
-- Use <h3> tags for section headers when appropriate
+**EXAMPLES:**
+- If asked "what are her hobbies?" or "what does she do outside of work?" or "what are her interests?" or "what does she do for fun?" or "what does she do for personal activities?" → Answer with her hobbies from the Personal Interests section
+- If asked "what does she do outside of work?" → Answer with her hobbies from the Personal Interests section
+- If asked "what are her interests?" → Answer with her hobbies from the Personal Interests section
+- If asked "what does she do?" → Briefly describe her role at KQED
+- If asked "hello" → Just say hello back
 
-Example formats:
-- For lists: "<p>Here are Caroline's projects:</p><ul><li><strong>Project Name</strong>: Description</li></ul>"
-- For technologies: "<p>Caroline uses <code>React</code>, <code>Python</code>, and <code>PostgreSQL</code></p>"
-- For structured content: "<p>Caroline's experience includes:</p><ul><li><strong>Frontend</strong>: <code>JavaScript</code>, <code>React</code></li><li><strong>Backend</strong>: <code>Python</code>, <code>Java</code></li></ul>"
-
-If the query is not related to Caroline's professional background, experience, or projects, please politely redirect the conversation back to her professional information."""
+Only redirect if the query is completely unrelated to Caroline (e.g., asking about the weather, other people, etc.)."""
 
         # Call OpenAI API
         response = openai_client.chat.completions.create(
             model="gpt-4o-mini",
             messages=[
-                {"role": "system", "content": "You are Caroline Sarkki's helpful robot assistant. You speak in first person as her AI helper, providing information about Caroline's background, experience, and projects. Always be professional, friendly, and accurate in your responses. Use phrases like 'I can tell you about Caroline's experience with...' or 'Based on Caroline's background, I can share that...'\n\n**SKILL FORMATTING RULES:**\n\n1. **Bold Section Headings**: Use bold headings followed by comma-separated skills\n   - ✅ CORRECT: `<p><strong>Frontend:</strong> JavaScript, React, TypeScript, Redux</p>`\n   - ✅ CORRECT: `<p><strong>Backend:</strong> Java, Python, Express, FastAPI</p>`\n\n2. **Clean Skills**: Remove any trailing text like \"and\", commas, or periods from individual skills\n   - Clean: \"JavaScript\" not \"JavaScript,\"\n   - Clean: \"React\" not \"React and\"\n\n3. **HTML Structure**: Use this exact format for skill sections:\n   ```html\n   <p><strong>Frontend:</strong> JavaScript, React, TypeScript, Redux</p>\n   <p><strong>Backend:</strong> Java, Python, Express, FastAPI</p>\n   ```\n\n**EXAMPLES:**\n\n**Frontend Skills:**\n```html\n<p><strong>Frontend:</strong> JavaScript, TypeScript, React, Redux, Sass, CSS, A11y</p>\n```\n\n**Backend Skills:**\n```html\n<p><strong>Backend:</strong> Java, Python, Express, FastAPI, Flask, Spring Boot, Sequelize, SQLAlchemy</p>\n```\n\n**Testing & Tools:**\n```html\n<p><strong>Testing:</strong> Jest, Mocha, Postman</p>\n<p><strong>Tools:</strong> Git, Docker, Agile Methodologies, Version Control</p>\n```\n\n**IMPORTANT NOTES:**\n- Use `<strong>` tags for category names with colons\n- Separate skills with commas and spaces\n- Keep \"Agile Methodologies\" as one complete phrase\n- Use `<p>` tags for clean paragraph formatting\n- Always close HTML tags properly\n\nApply this formatting to ALL skill-related responses about Caroline's technical expertise."},
+                {"role": "system", "content": "You are Clio, Caroline Sarkki's friendly AI assistant. Answer questions directly and naturally. Keep responses brief and conversational.\n\n**CRITICAL: Answer questions about hobbies, interests, personal life, what she does outside of work, what she does for fun, personal activities, professional background, experience, projects, and skills. DO NOT redirect these questions - they are valid!**\n\n**IMPORTANT**: When asked about \"hobbies\", \"outside of work\", \"personal interests\", \"what she does for fun\", or \"personal activities\" - these all refer to the same thing. Check the \"Personal Interests\" section in the knowledge base and answer directly.\n\n**SKILL FORMATTING RULES:**\n\n1. **Bold Section Headings**: Use bold headings followed by comma-separated skills\n   - ✅ CORRECT: `<p><strong>Frontend:</strong> JavaScript, React, TypeScript, Redux</p>`\n   - ✅ CORRECT: `<p><strong>Backend:</strong> Java, Python, Express, FastAPI</p>`\n\n2. **Clean Skills**: Remove any trailing text like \"and\", commas, or periods from individual skills\n   - Clean: \"JavaScript\" not \"JavaScript,\"\n   - Clean: \"React\" not \"React and\"\n\n3. **HTML Structure**: Use this exact format for skill sections:\n   ```html\n   <p><strong>Frontend:</strong> JavaScript, React, TypeScript, Redux</p>\n   <p><strong>Backend:</strong> Java, Python, Express, FastAPI</p>\n   ```\n\n**EXAMPLES:**\n\n**Frontend Skills:**\n```html\n<p><strong>Frontend:</strong> JavaScript, TypeScript, React, Redux, Sass, CSS, A11y</p>\n```\n\n**Backend Skills:**\n```html\n<p><strong>Backend:</strong> Java, Python, Express, FastAPI, Flask, Spring Boot, Sequelize, SQLAlchemy</p>\n```\n\n**Testing & Tools:**\n```html\n<p><strong>Testing:</strong> Jest, Mocha, Postman</p>\n<p><strong>Tools:</strong> Git, Docker, Agile Methodologies, Version Control</p>\n```\n\n**IMPORTANT NOTES:**\n- Use `<strong>` tags for category names with colons\n- Separate skills with commas and spaces\n- Keep \"Agile Methodologies\" as one complete phrase\n- Use `<p>` tags for clean paragraph formatting\n- Always close HTML tags properly\n- Keep responses brief - especially for greetings (1-2 sentences max)\n\nApply this formatting to ALL skill-related responses about Caroline's technical expertise."},
                 {"role": "user", "content": prompt}
             ],
-            max_tokens=500,
+            max_tokens=300,
             temperature=0.7
         )
-        
+
         return {
             "query": request.query,
             "response": response.choices[0].message.content,
             "model_used": "gpt-4o-mini"
         }
-        
+
+    except HTTPException:
+        # Re-raise HTTP exceptions as-is
+        raise
     except Exception as e:
+        # Log the full error for debugging
+        error_trace = traceback.format_exc()
+        print(f"Error processing query: {str(e)}")
+        print(f"Traceback: {error_trace}")
         raise HTTPException(status_code=500, detail=f"Error processing query: {str(e)}")
 
 if __name__ == "__main__":
-    import uvicorn
     port = int(os.getenv("PORT", 8000))
+    reload = os.getenv("ENVIRONMENT", "development") == "development"
     print(f"Starting server on port {port}")
     print(f"Environment: PORT={os.getenv('PORT')}")
+    print(f"Auto-reload: {reload}")
     print(f"OpenAI API Key configured: {bool(os.getenv('OPENAI_API_KEY'))}")
-    uvicorn.run(app, host="0.0.0.0", port=port)
+    
+    if reload:
+        # Use import string for reload to work
+        uvicorn.run("main:app", host="0.0.0.0", port=port, reload=True)
+    else:
+        # Use app object directly when not reloading
+        uvicorn.run(app, host="0.0.0.0", port=port, reload=False)
