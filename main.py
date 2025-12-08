@@ -17,8 +17,12 @@ if environment == "production":
     # Production: only allow specific origins
     allowed_origins = [
         "https://caroline-sarkki-portfolio.vercel.app",
-        "https://caroline-sarkki-portfolio-git-main-caroline-sarkkis-projects.vercel.app",  # Vercel preview URLs
     ]
+    # Allow additional origins from environment variable (comma-separated)
+    # Useful for Vercel preview URLs which are dynamic
+    additional_origins = os.getenv("ALLOWED_ORIGINS", "")
+    if additional_origins:
+        allowed_origins.extend([origin.strip() for origin in additional_origins.split(",")])
 else:
     # Development: allow local frontend
     allowed_origins = [
@@ -27,6 +31,8 @@ else:
     ]
 
 # Add CORS middleware
+print(f"CORS Configuration - Environment: {environment}")
+print(f"Allowed Origins: {allowed_origins}")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=allowed_origins,
