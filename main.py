@@ -11,10 +11,25 @@ load_dotenv()
 
 app = FastAPI(title="Caroline Sarkki Portfolio API", version="1.0.0")
 
+# Configure CORS based on environment
+environment = os.getenv("ENVIRONMENT", "development")
+if environment == "production":
+    # Production: only allow specific origins
+    allowed_origins = [
+        "https://caroline-sarkki-portfolio.vercel.app",
+        "https://caroline-sarkki-portfolio-git-main-caroline-sarkkis-projects.vercel.app",  # Vercel preview URLs
+    ]
+else:
+    # Development: allow local frontend
+    allowed_origins = [
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+    ]
+
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # In production, replace with specific origins
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
