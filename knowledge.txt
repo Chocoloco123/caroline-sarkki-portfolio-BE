@@ -20,10 +20,11 @@ Software Engineer — Full-Stack Focus (June 2025 - Present):
 
 Software Developer — Frontend Focus (June 2023 - June 2025):
 - Engineered major features for Voter Guide & Election Results platforms supporting high-traffic election periods
+  - The 2022 Voter Guide was recognized by the Los Angeles Times (https://www.latimes.com/politics/story/2022-11-04/guide-to-midterm-guides-endorsements-california-election-2022)
 - Rebuilt the global navigation system for improved accessibility, clarity, and performance
 - Redesigned banner ad components and enhanced ad delivery integration
 - Integrated dynamic election APIs using React, Redux Toolkit, TypeScript, Sass, and Jest
-- Supported Youth Media's WCAG 2.1 AA accessibility achievement with accessible component patterns
+- Played a key role in Youth Media's work that earned the company a WCAG 2.1 AA accessibility rating through accessible component patterns
 - Integrated WordPress as a headless CMS supporting editorial workflows
 
 Junior Software Developer (June 2022 - June 2023):
@@ -34,9 +35,9 @@ Junior Software Developer (June 2022 - June 2023):
 
 Key Projects and Achievements:
 - Membership & Account Platform: End-to-end rebuild improving login flow and user experience for donors and members
-- Voter Guide & Election Results: High-traffic election systems serving hundreds of thousands of users during election periods
+- Voter Guide & Election Results: High-traffic election systems serving hundreds of thousands of users during election periods. The 2022 Voter Guide was recognized by the Los Angeles Times (https://www.latimes.com/politics/story/2022-11-04/guide-to-midterm-guides-endorsements-california-election-2022)
 - Navigation System Redesign: Completely reinvented global navigation for improved accessibility and performance
-- Youth Media Platform: Played key role in achieving WCAG 2.1 AA accessibility through accessible components and patterns
+- Youth Media Platform: Played key role in achieving WCAG 2.1 AA accessibility rating for the company through accessible components and patterns
 - Micro Websites: Built and maintained various micro websites focusing on performance, SEO, and user engagement
 
 Mentorship and Leadership:
