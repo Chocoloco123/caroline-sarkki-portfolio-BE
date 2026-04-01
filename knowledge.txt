@@ -96,3 +96,149 @@ Contact Information:
 Company Information:
 - KQED Website: https://www.kqed.org/
 - KQED is a public media organization serving Northern California
+
+------------------------------
+Engineering Approach
+------------------------------
+
+Caroline approaches engineering with a focus on clarity, system design, and real-world impact.
+
+She prioritizes:
+- Designing systems that are easy to understand, extend, and maintain
+- Building backend services that are reliable, well-structured, and aligned with product needs
+- Keeping frontend and backend responsibilities clearly defined and well-integrated
+- Understanding tradeoffs between speed, scalability, and complexity
+
+She is especially strong at:
+- Translating product requirements into full-stack implementations
+- Designing API contracts and data models that support long-term growth
+- Thinking through edge cases, failure modes, and system interactions
+- Balancing pragmatism with strong engineering practices
+
+She prefers practical, production-ready solutions over overly abstract or theoretical designs.
+
+
+------------------------------
+Career Direction
+------------------------------
+
+Caroline is a full-stack software engineer who enjoys building end-to-end systems that connect user-facing experiences with scalable backend services.
+
+She is particularly strong in roles that involve:
+- Designing and implementing features across both frontend and backend
+- Building and integrating APIs, authentication systems, and data models
+- Working closely with product and design to deliver user-centered solutions
+
+She thrives in environments where she can take ownership of features, contribute to system design decisions, and work across the stack to deliver reliable, production-ready applications.
+
+She is open to a range of full-stack and backend-leaning roles where she can continue growing her backend and systems expertise while maintaining strong product intuition.
+
+
+------------------------------
+Strengths
+------------------------------
+
+- Full-stack ownership across frontend, backend APIs, authentication systems, and deployments
+- Strong experience designing and integrating backend services (REST APIs, auth flows, data modeling)
+- Proven ability to ship production systems with real users and real constraints
+- Experience working with cloud environments, containerization (Docker), and CI/CD pipelines
+- Ability to connect product requirements to technical implementation across the stack
+
+
+------------------------------
+What sets Caroline apart
+------------------------------
+
+- Combines strong frontend foundations with proven full-stack experience in production environments
+- Has built and deployed full-stack systems both professionally and independently, including API design, authentication systems, and cloud deployments
+- Understands how frontend and backend systems interact in real-world, high-traffic applications
+- Brings a product mindset to backend development, focusing on reliability, usability, and long-term maintainability
+
+
+------------------------------
+Backend & Systems Experience
+------------------------------
+
+Caroline has hands-on experience building and working with backend systems, including:
+
+- Designing and implementing REST APIs using Node.js, Java (Spring Boot), and FastAPI
+- Building authentication systems including OAuth, JWT-based sessions, and passwordless email flows
+- Modeling relational and non-relational data (PostgreSQL, MongoDB) based on product needs
+- Managing API integrations and real-time data flows in high-traffic environments
+- Deploying and maintaining services using Docker, GCP, and cloud-based platforms (Vercel, Railway)
+
+She is comfortable working across the full request lifecycle, from frontend interaction to backend processing and data persistence.
+
+
+------------------------------
+Project Summaries
+------------------------------
+
+- Crittr: Full-stack AI-powered pet care platform with journaling, reminders, and chatbot features, built with Next.js and FastAPI
+- The BauWau Haus: Small business website for a dog training brand focused on trust, clarity, and conversion
+- AI Chatbot Portfolio: Interactive chatbot that answers questions about Caroline’s experience using structured context and OpenAI API
+
+
+------------------------------
+The BauWau Haus (Client Project)
+------------------------------
+
+The BauWau Haus is a production website built for a small dog training business to establish a professional online presence and convert visitors into clients.
+
+Caroline owned the project end-to-end, including design decisions, frontend development, deployment, and production setup.
+
+Key features:
+- Clear service presentation to help users quickly understand offerings
+- Conversion-focused layout with strong calls-to-action
+- Contact form integrated with email delivery using Resend
+- Fully responsive design for mobile and desktop users
+
+Technical implementation:
+- Built using modern frontend technologies (React / Next.js / TypeScript)
+- Deployed on Vercel with domain and DNS configuration via GoDaddy
+- Configured email delivery (SPF/DKIM) to ensure reliable contact form submissions
+
+Challenges addressed:
+- No existing website or centralized source of information for the business
+- Needed to balance simplicity with a professional, trustworthy design
+- Required a low-maintenance solution suitable for a non-technical client
+
+Outcome:
+- Delivered a clean, modern website that improves credibility and makes it easy for potential clients to take action
+- Provided a reliable and maintainable setup for ongoing use
+
+This project demonstrates Caroline’s ability to deliver real-world products for clients, combining product thinking, frontend execution, and deployment/infrastructure setup.
+
+
+------------------------------
+Common Questions
+------------------------------
+
+Q: What kind of engineer is Caroline?
+A: Caroline is a full-stack engineer with a strong frontend foundation who has expanded into backend systems, APIs, and cloud deployments. She focuses on building real, user-centered products and enjoys owning features end-to-end.
+
+Q: Is Caroline a frontend or backend engineer?
+A: Caroline is a full-stack engineer with a strong frontend foundation and significant experience building backend systems, including APIs, authentication workflows, and cloud deployments.
+
+Q: Does Caroline have backend experience?
+A: Yes, she has designed and implemented backend services using Node.js, Java (Spring Boot), and FastAPI, including authentication systems, API integrations, and database modeling.
+
+Q: What kind of problems does Caroline enjoy working on?
+A: She enjoys building end-to-end features that require both frontend and backend thinking, especially where system design, data flow, and user experience intersect.
+
+Q: Can Caroline own features end-to-end?
+A: Yes, she has experience owning features from initial concept through frontend implementation, backend services, and deployment.
+
+Q: Does Caroline have experience with AI?
+A: Yes, she has built multiple AI-powered applications using the OpenAI API, including chatbots, recommendation systems, and automation tools.
+
+
+------------------------------
+Response Guidelines
+------------------------------
+
+- Only answer using the provided information about Caroline
+- If a question cannot be answered, say that you do not have that information
+- Do not make up experience, skills, or projects
+- Keep answers clear, concise, and conversational
+- Prioritize accuracy over sounding overly confident
