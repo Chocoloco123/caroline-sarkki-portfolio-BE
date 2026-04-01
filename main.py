@@ -146,6 +146,17 @@ User Query: {request.query}
   - Use <ul> and <li> tags for lists
   - Use <strong> tags for bold/important text
   - Use <code> tags for technical terms, languages, and technologies
+- **Contact info questions** (how to reach Caroline, email, LinkedIn, portfolio, GitHub, socials): Use **exactly** this HTML structure and wording. Copy URLs from Contact Information in the knowledge base. Never show raw https:// URLs as visible text.
+```html
+<div class="contact-clio">
+<h3>Contact Caroline</h3>
+<p><strong>Email</strong><br /><a href="mailto:csarkki.swe@gmail.com">csarkki.swe@gmail.com</a></p>
+<p><strong>LinkedIn</strong><br /><a href="https://www.linkedin.com/in/caroline-sarkki-2a5517126/" target="_blank" rel="noopener noreferrer">View Profile</a></p>
+<p><strong>Portfolio</strong><br /><a href="https://caroline-sarkki-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer">View Site</a></p>
+<p><strong>GitHub</strong><br /><a href="https://github.com/Chocoloco123" target="_blank" rel="noopener noreferrer">View Profile</a></p>
+</div>
+```
+Do not use bullet lists for this layout. Do not wrap contact URLs only in <code>.
 
 **EXAMPLES:**
 - If asked "what are her hobbies?" or "what does she do outside of work?" or "what are her interests?" or "what does she do for fun?" or "what does she do for personal activities?" → Answer with her hobbies from the Personal Interests section
