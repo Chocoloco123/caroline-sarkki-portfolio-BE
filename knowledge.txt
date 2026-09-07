@@ -1,15 +1,18 @@
 Caroline Sarkki - Full Stack Software Engineer
 
 Professional Background:
-- Full-Stack Software Engineer with 3+ years of experience building scalable, accessible, and cloud-ready applications
-- Currently working at KQED (https://www.kqed.org/) as Software Engineer — Full-Stack Focus (June 2025 - Present)
-- Specializes in modern UI architecture, backend API development, authentication workflows, real-time data integrations, and cloud deployments
+- Full-Stack Software Engineer at KQED, building end-to-end features for platforms serving hundreds of thousands of people — and increasingly, the tooling and training that make her team faster
+- Currently working at KQED (https://www.kqed.org/) as Frontend Developer (June 2025 - Present)
+- Over the past 4 years has worked across React, TypeScript, Java, Spring Boot, Node, MongoDB, PostgreSQL, Docker, and GCP
+- Recently designed and built KQED's first internal AI product — a self-serve election results pipeline using the Claude API
+- Leads developer-experience work across her team: an internal AI Maker Workshop series, a shared library of reusable AI skills, and her team's Postman standard
+- Has mentored three junior engineers and four interns
 - Based in San Francisco Bay Area, Remote-Friendly
 - Known for meaningful projects that serve the community and deliver reliable, user-centered solutions
 
 Professional Experience at KQED:
 
-Software Engineer — Full-Stack Focus (June 2025 - Present):
+Frontend Developer (June 2025 - Present):
 - Delivered end-to-end development for a Membership & Account platform rebuild using React, TypeScript, Node.js, Java, Spring Boot, and MongoDB
 - Improved donor and member experience through clearer account interactions and streamlined authentication workflows
 - Built backend APIs for authentication, profile management, and internal integrations
@@ -18,7 +21,7 @@ Software Engineer — Full-Stack Focus (June 2025 - Present):
 - Mentored junior engineers and participated in architecture discussions and reviews
 - Developed full-stack AI applications including an OpenAI-powered chatbot and recommendation engine
 
-Software Developer — Frontend Focus (June 2023 - June 2025):
+Frontend Developer (June 2023 - June 2025):
 - Engineered major features for Voter Guide & Election Results platforms supporting high-traffic election periods
   - The 2022 Voter Guide was recognized by the Los Angeles Times (https://www.latimes.com/politics/story/2022-11-04/guide-to-midterm-guides-endorsements-california-election-2022)
 - Rebuilt the global navigation system for improved accessibility, clarity, and performance
@@ -34,15 +37,21 @@ Junior Software Developer (June 2022 - June 2023):
 - Improved documentation and test coverage through QA collaboration and reviews
 
 Key Projects and Achievements:
-- Membership & Account Platform: End-to-end rebuild improving login flow and user experience for donors and members
+- KQED Election Results AI Pipeline: KQED's first internal AI product — a self-serve tool (React, Node.js, Claude API, Google Sheets API) where a data lead selects a county and either uploads a results file or triggers an automated scrape, with the Claude API standardizing output into sheet-ready data. Validated against live election data during the June 2026 midterms; connecting to KQED's public election results site for full production in November 2026. Replaced a manual process that required about a dozen people entering county results by hand with a self-serve tool run by a much smaller team, repeatedly over the month-plus results period, while retaining human QA review. Built solo using Claude Code and Cursor.
+- Membership & Account Platform (User Account System): End-to-end rebuild improving login flow and user experience for donors and members. Built backend APIs for authentication, profile management, secure account deletion, and integration with a third-party membership provider handling sensitive patron data
 - Voter Guide & Election Results: High-traffic election systems serving hundreds of thousands of users during election periods. The 2022 Voter Guide was recognized by the Los Angeles Times (https://www.latimes.com/politics/story/2022-11-04/guide-to-midterm-guides-endorsements-california-election-2022)
 - Navigation System Redesign: Completely reinvented global navigation for improved accessibility and performance
 - Youth Media Platform: Played key role in achieving WCAG 2.1 AA accessibility rating for the company through accessible components and patterns
 - Micro Websites: Built and maintained various micro websites focusing on performance, SEO, and user engagement
 
+Developer Experience & Enablement:
+- AI Maker Workshop Series: Created and taught an internal workshop series introducing practical applications of AI/LLM tooling and prompt engineering, attended by 10 of the 15 people on the product team, engineers and non-engineers alike
+- Shared AI Skills Repository: Built and maintains an internal library of reusable AI skills (Claude API, internal tooling) — including tools for engineering documentation, Jira ticket formatting, and document summarization — open to the full team, including non-engineers
+- Postman Standard: Established the team's Postman standard — wrote the documentation, maintains a canonical forkable collection pattern, and configured role-based access permissions for every engineer and contractor
+
 Mentorship and Leadership:
-- Mentored 4 interns, helping them grow their technical skills and think like engineers
-- Trained interns and junior developers in JavaScript, TypeScript, React, Redux, Sass, Java, and various development tools
+- Mentored 3 junior engineers and 4 interns, helping them grow their technical skills and think like engineers
+- Trained junior engineers and interns in JavaScript, TypeScript, React, Redux, Sass, Java, and various development tools
 - Led technical discussions for both engineers and non-engineers
 - Known for calm problem-solving and clear communication
 - Collaborates closely with product managers, designers, and engineering teams
@@ -60,8 +69,8 @@ Technical Skills:
 - Databases: MongoDB, SQL, PostgreSQL
 - Cloud & DevOps: Docker, Google Cloud Platform (GCP), CI/CD, GitHub Actions, Cloud Deployments, Containerization
 - Testing: Jest, React Testing Library, Unit Testing, Integration Testing, TDD
-- AI & Modern Tech: OpenAI API, AI Chatbots, Recommendation Systems, Prompt Engineering
-- Collaboration: Agile/Scrum, Product Partnership, Cross-Functional Communication, Mentoring
+- AI & Modern Tech: OpenAI API, Claude API, AI-Assisted Development, AI Chatbots, Recommendation Systems, Prompt Engineering
+- Collaboration: Agile/Scrum, Product Partnership, Cross-Functional Communication, Mentoring, Developer Experience, Technical Documentation
 
 AI Maker Expertise:
 - OpenAI API Integration: Expert in leveraging OpenAI's GPT models for practical applications
@@ -89,7 +98,7 @@ Personal Interests:
 
 Contact Information:
 - Email: csarkki.swe@gmail.com
-- LinkedIn: https://www.linkedin.com/in/caroline-sarkki-2a5517126/
+- LinkedIn: https://www.linkedin.com/in/caroline-sarkki
 - Portfolio Website: https://caroline-sarkki-portfolio.vercel.app/
 - GitHub: https://github.com/Chocoloco123
 
@@ -100,7 +109,7 @@ How to Connect with Caroline
 The best ways to reach Caroline are listed in Contact Information above. In short:
 
 - Email (csarkki.swe@gmail.com): Best for direct outreach, questions, or opportunities.
-- LinkedIn (https://www.linkedin.com/in/caroline-sarkki-2a5517126/): Professional profile, networking, and staying in touch.
+- LinkedIn (https://www.linkedin.com/in/caroline-sarkki): Professional profile, networking, and staying in touch.
 - Portfolio website (https://caroline-sarkki-portfolio.vercel.app/): Explore her work, background, and the interactive portfolio chatbot.
 - GitHub (https://github.com/Chocoloco123): Code, repositories, and technical projects.
 

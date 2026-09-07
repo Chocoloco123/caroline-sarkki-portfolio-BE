@@ -112,7 +112,7 @@ async def root():
             }
         },
         "contact": {
-            "linkedin": "https://www.linkedin.com/in/caroline-sarkki-2a5517126/",
+            "linkedin": "https://www.linkedin.com/in/caroline-sarkki",
             "portfolio": "https://chocoloco123.github.io/index.html",
             "github": "https://github.com/Chocoloco123",
             "email": "csarkki.swe@gmail.com"
@@ -151,7 +151,7 @@ User Query: {request.query}
 <div class="contact-clio">
 <h3>Contact Caroline</h3>
 <p><strong>Email</strong><br /><a href="mailto:csarkki.swe@gmail.com">csarkki.swe@gmail.com</a></p>
-<p><strong>LinkedIn</strong><br /><a href="https://www.linkedin.com/in/caroline-sarkki-2a5517126/" target="_blank" rel="noopener noreferrer">View Profile</a></p>
+<p><strong>LinkedIn</strong><br /><a href="https://www.linkedin.com/in/caroline-sarkki" target="_blank" rel="noopener noreferrer">View Profile</a></p>
 <p><strong>Portfolio</strong><br /><a href="https://caroline-sarkki-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer">View Site</a></p>
 <p><strong>GitHub</strong><br /><a href="https://github.com/Chocoloco123" target="_blank" rel="noopener noreferrer">View Profile</a></p>
 </div>
