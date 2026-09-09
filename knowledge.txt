@@ -13,6 +13,7 @@ Professional Background:
 Professional Experience at KQED:
 
 Frontend Developer (June 2025 - Present):
+Fullstack scope:  React and TypeScript frontends, Node.js/Java/Spring Boot APIs, MongoDB, and Docker/GCP deployment
 - Delivered end-to-end development for a Membership & Account platform rebuild using React, TypeScript, Node.js, Java, Spring Boot, and MongoDB
 - Improved donor and member experience through clearer account interactions and streamlined authentication workflows
 - Built backend APIs for authentication, profile management, and internal integrations
@@ -37,7 +38,7 @@ Junior Software Developer (June 2022 - June 2023):
 - Improved documentation and test coverage through QA collaboration and reviews
 
 Key Projects and Achievements:
-- KQED Election Results AI Pipeline: KQED's first internal AI product — a self-serve tool (React, Node.js, Claude API, Google Sheets API) where a data lead selects a county and either uploads a results file or triggers an automated scrape, with the Claude API standardizing output into sheet-ready data. Validated against live election data during the June 2026 midterms; connecting to KQED's public election results site for full production in November 2026. Replaced a manual process that required about a dozen people entering county results by hand with a self-serve tool run by a much smaller team, repeatedly over the month-plus results period, while retaining human QA review. Built solo using Claude Code and Cursor.
+- KQED Election Results AI Pipeline: KQED's first internal AI product — a self-serve tool (React, Node.js, Claude API, Google Sheets API) where a data lead selects a county and either uploads a results file or triggers an automated scrape, with the Claude API standardizing output into sheet-ready data. Tested at least a dozen times against each county file format before going live. Validated against live election data during the June 2026 midterms — ran at least 4 full passes across all 15 counties on election night; where a county previously took an estimated 20 minutes to process by hand, the tool brings that down to roughly 2. Connecting to KQED's public election results site for full production in November 2026. Replaced a manual process that required about a dozen people entering county results by hand with a self-serve tool run by a much smaller team, repeatedly over the month-plus results period, while retaining human QA review. Built solo using Claude Code and Cursor.
 - Membership & Account Platform (User Account System): End-to-end rebuild improving login flow and user experience for donors and members. Built backend APIs for authentication, profile management, secure account deletion, and integration with a third-party membership provider handling sensitive patron data
 - Voter Guide & Election Results: High-traffic election systems serving hundreds of thousands of users during election periods. The 2022 Voter Guide was recognized by the Los Angeles Times (https://www.latimes.com/politics/story/2022-11-04/guide-to-midterm-guides-endorsements-california-election-2022)
 - Navigation System Redesign: Completely reinvented global navigation for improved accessibility and performance
@@ -45,9 +46,9 @@ Key Projects and Achievements:
 - Micro Websites: Built and maintained various micro websites focusing on performance, SEO, and user engagement
 
 Developer Experience & Enablement:
-- AI Maker Workshop Series: Created and taught an internal workshop series introducing practical applications of AI/LLM tooling and prompt engineering, attended by 10 of the 15 people on the product team, engineers and non-engineers alike
-- Shared AI Skills Repository: Built and maintains an internal library of reusable AI skills (Claude API, internal tooling) — including tools for engineering documentation, Jira ticket formatting, and document summarization — open to the full team, including non-engineers
-- Postman Standard: Established the team's Postman standard — wrote the documentation, maintains a canonical forkable collection pattern, and configured role-based access permissions for every engineer and contractor
+- AI Maker Workshop Series: Created and taught a 6-session internal workshop series (over six weeks) on practical AI/LLM tooling and prompt engineering, attended by 10 of the 15 people on the product team, engineers and non-engineers alike. Every attendee graduated by shipping their own portfolio site with an AI chatbot; at least a PM and three engineers have carried what they learned into their day-to-day work since
+- Shared AI Skills Repository: Built and maintains an internal library of 3 reusable AI skills (Claude API, internal tooling) — covering engineering documentation, Jira ticket formatting, and document summarization — open to the full team, including non-engineers
+- Postman Standard: Established the team's Postman standard — wrote the documentation, maintains a canonical forkable collection pattern, and configured role-based access permissions across the team's 13-15 engineers and contractors
 
 Mentorship and Leadership:
 - Mentored 3 junior engineers and 4 interns, helping them grow their technical skills and think like engineers
@@ -69,7 +70,7 @@ Technical Skills:
 - Databases: MongoDB, SQL, PostgreSQL
 - Cloud & DevOps: Docker, Google Cloud Platform (GCP), CI/CD, GitHub Actions, Cloud Deployments, Containerization
 - Testing: Jest, React Testing Library, Unit Testing, Integration Testing, TDD
-- AI & Modern Tech: OpenAI API, Claude API, AI-Assisted Development, AI Chatbots, Recommendation Systems, Prompt Engineering
+- AI & Modern Tech: OpenAI API, Claude API, Claude Code, Cursor, GitHub Copilot, AI-Assisted Development, AI Chatbots, Recommendation Systems, Prompt Engineering
 - Collaboration: Agile/Scrum, Product Partnership, Cross-Functional Communication, Mentoring, Developer Experience, Technical Documentation
 
 AI Maker Expertise:
@@ -203,8 +204,9 @@ In Crittr, Caroline designed and implemented a full backend system using FastAPI
 Project Summaries
 ------------------------------
 
-- Crittr: Full-stack AI-powered pet care platform built with Next.js and FastAPI, featuring journaling, reminders, authentication systems, and AI-driven insights. Designed and deployed end-to-end with PostgreSQL, Dockerized backend, and cloud hosting (Vercel + Railway)
-- The BauWau Haus: Client project — full-stack production website for a dog training business, built end-to-end with frontend development, deployment, DNS configuration, and email integration (Resend)
+- KQED Election Results AI Pipeline: KQED's first internal AI product — a self-serve election results tool (React, Node.js, Claude API, Google Sheets API) that replaced a ~12-person manual process. Full case study at /case-studies/kqed-election-results-pipeline
+- Crittr: Full-stack AI-powered pet care platform built with Next.js and FastAPI, featuring journaling, reminders, authentication systems, and AI-driven insights. Designed and deployed end-to-end with PostgreSQL, Dockerized backend, and cloud hosting (Vercel + Railway). Full case study at /case-studies/crittr
+- The BauWau Haus: Client project — full-stack production website for a dog training business, built end-to-end with frontend development, deployment, DNS configuration, and email integration (Resend). Full case study at /case-studies/bauwau-haus
 - AI Chatbot Portfolio: Interactive chatbot that answers questions about Caroline’s experience using structured context and OpenAI API
 
 
